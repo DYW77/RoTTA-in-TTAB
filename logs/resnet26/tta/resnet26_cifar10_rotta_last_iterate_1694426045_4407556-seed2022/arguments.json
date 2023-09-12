@@ -1,0 +1,122 @@
+{
+ "job_name": "tta",
+ "job_id": null,
+ "timestamp": null,
+ "python_path": "python",
+ "main_file": "run_exp.py",
+ "script_path": null,
+ "script_class_name": null,
+ "num_jobs_per_node": 2,
+ "num_jobs_per_script": 1,
+ "wait_in_seconds_per_job": 15,
+ "root_path": "./logs",
+ "data_path": "./datasets",
+ "ckpt_path": "E:/GITHUB/models/models/resnet26/cifar10/resnet26_with_head-150-regular-0.9343000054359436.pth",
+ "seed": 2022,
+ "device": "cpu",
+ "num_cpus": 2,
+ "model_name": "resnet26",
+ "group_norm_num_groups": null,
+ "model_adaptation_method": "rotta",
+ "model_selection_method": "last_iterate",
+ "task": "classification",
+ "test_scenario": null,
+ "base_data_name": "cifar10",
+ "src_data_name": "cifar10",
+ "data_names": "cifar10_c_deterministic-gaussian_noise-5",
+ "data_wise": "batch_wise",
+ "batch_size": 64,
+ "lr": 0.001,
+ "n_train_steps": 1,
+ "offline_pre_adapt": false,
+ "episodic": false,
+ "intra_domain_shuffle": true,
+ "inter_domain": "HeterogeneousNoMixture",
+ "domain_sampling_name": "uniform",
+ "domain_sampling_ratio": 1.0,
+ "non_iid_pattern": "class_wise_over_domain",
+ "non_iid_ness": 0.1,
+ "label_shift_param": null,
+ "data_size": null,
+ "step_ratios": [
+  0.1,
+  0.3,
+  0.5,
+  0.75
+ ],
+ "step_ratio": null,
+ "stochastic_restore_model": false,
+ "restore_prob": 0.01,
+ "fishers": false,
+ "fisher_size": 5000,
+ "fisher_alpha": 1.5,
+ "aug_size": 32,
+ "entry_of_shared_layers": null,
+ "record_preadapted_perf": false,
+ "grad_checkpoint": false,
+ "debug": false,
+ "test_domains": [
+  {
+   "base_data_name": "cifar10",
+   "data_name": "cifar10_c_deterministic-gaussian_noise-5",
+   "shift_type": "synthetic",
+   "shift_property": {
+    "shift_degree": 5,
+    "shift_name": "gaussian_noise",
+    "version": "deterministic",
+    "has_shift": true
+   },
+   "domain_sampling_name": "uniform",
+   "domain_sampling_value": null,
+   "domain_sampling_ratio": 1.0
+  }
+ ],
+ "test_case": {
+  "inter_domain": {
+   "has_mixture": false,
+   "non_iid_pattern": "class_wise_over_domain",
+   "non_iid_ness": 0.1
+  },
+  "batch_size": 64,
+  "data_wise": "batch_wise",
+  "offline_pre_adapt": false,
+  "episodic": false,
+  "intra_domain_shuffle": true
+ },
+ "statistics": {
+  "mean": [
+   0.485,
+   0.456,
+   0.406
+  ],
+  "std": [
+   0.229,
+   0.224,
+   0.225
+  ],
+  "n_classes": 10
+ },
+ "version": "deterministic",
+ "img_shape": [
+  32,
+  32,
+  3
+ ],
+ "optimizer": "SGD",
+ "alpha": 0.05,
+ "beta": 0.9,
+ "memory_size": 64,
+ "momentum": 0.9,
+ "dampening": 0.0,
+ "nu": 0.001,
+ "update_frequency": 64,
+ "lambda_t": 1.0,
+ "lambda_u": 1.0,
+ "input_size": [
+  32,
+  32
+ ],
+ "weight_decay": 0.0,
+ "checkpoint_path": "./logs\\resnet26\\tta\\resnet26_cifar10_rotta_last_iterate_1694426045_4407556-seed2022",
+ "status": "finished"
+}
