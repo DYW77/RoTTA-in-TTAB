@@ -93,7 +93,7 @@ algorithm_defaults = {
         "reset_constant_em": 0.2,  # threshold e_m for model recovery scheme
     },
     "rotta":{
-        "optimizer": "SGD",
+        "optimizer": "Adam",
         "alpha":0.05,
         "beta":0.9,
         "memory_size":64,
