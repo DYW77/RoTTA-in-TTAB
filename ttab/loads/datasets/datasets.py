@@ -204,7 +204,7 @@ class CIFARDataset(PyTorchDataset):
             raise ValueError("Please download cifar_c data from the website.")
 
         data_raw = np.load(domain_path)
-        #data_raw = data_raw[(shift_degree - 1) * 10000 : shift_degree * 10000]
+        data_raw = data_raw[(shift_degree - 1) * 10000 : shift_degree * 10000]
         return data_raw
 
     @staticmethod
